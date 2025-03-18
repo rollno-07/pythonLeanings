@@ -45,7 +45,7 @@ def open_website(command):
     speak("Website not recognized.")
 
 def fetch_news():
-    api_key = "6727ac467b0444b2b53c71a706b2192c"
+    api_key = ""
     url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}"
     response = requests.get(url).json()
     articles = response.get("articles", [])[:5]
