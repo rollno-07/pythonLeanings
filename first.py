@@ -25,3 +25,16 @@ print("World!")
 print("Python", "is", "awesome", sep=" - ")
 
 
+#####Python input() Function – User Input in Python
+name = input("Enter your name: ")
+print("Hello,", name)
+
+#Converting Input Data Type:
+age = int(input("Enter your age: "))
+print(f"You are {age} years old.")
+
+# Prompt Message:
+language = input("What is your favorite programming language? ")
+print(f"Nice choice! {language} is awesome.")
+
+
