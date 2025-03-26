@@ -55,4 +55,3 @@ print(numbers)
 # Slicing: Extracts a subset of the list
 
 print(numbers[1:3])  # Output: [2, 3]
-
