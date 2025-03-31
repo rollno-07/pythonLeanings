@@ -274,3 +274,116 @@ Casting must be valid. For instance, int("3.14") will raise an error since "3.14
 
 When converting from float to int, Python truncates the decimal part (it does not round).
 
+
+# Python Functions
+Functions in Python are blocks of reusable code that perform a specific task. They help in organizing code, making it more readable, and avoiding repetition.
+
+# Types of Functions in Python
+Built-in Functions – Predefined functions in Python like print(), len(), sum(), etc.
+
+User-defined Functions – Functions created by the user.
+
+Lambda Functions – Anonymous functions using the lambda keyword.
+
+Recursive Functions – Functions that call themselves.
+
+# 1. Creating a User-Defined Function
+A function is defined using the def keyword.
+
+ Example: Simple Function
+ def greet():
+    print("Hello, welcome to Python!")
+
+greet()  # Output: Hello, welcome to Python!
+
+
+# 2. Function with Parameters
+Parameters allow functions to accept input values.
+
+Example: Function with Parameters
+
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Sum:", result)  # Output: Sum: 8
+
+# 3. Function with Default Parameters
+If no value is passed, the default value is used.
+
+ Example: Function with Default Parameter
+
+ def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Output: Hello, Alice!
+greet()         # Output: Hello, Guest!
+
+
+# 4. Function with Return Value
+A function can return a value using the return statement.
+
+Example: Function Returning a Value
+def multiply(x, y):
+    return x * y
+
+result = multiply(4, 5)
+print("Multiplication:", result)  # Output: Multiplication: 20
+
+# 5. Function with Variable-Length Arguments (*args and **kwargs)
+*args – Allows passing multiple positional arguments as a tuple.
+
+**kwargs – Allows passing multiple keyword arguments as a dictionary.
+
+Example: Using *args
+
+def sum_numbers(*args):
+    return sum(args)
+
+print(sum_numbers(1, 2, 3, 4))  # Output: 10
+
+Example: Using **kwargs
+
+def user_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+user_info(name="Alice", age=25, city="New York")
+# Output:
+# name: Alice
+# age: 25
+# city: New York
+
+# 6. Lambda Function (Anonymous Function)
+A lambda function is a small, one-line function without a name.
+
+Example: Lambda Function
+square = lambda x: x * x
+print(square(5))  # Output: 25
+
+Example: Lambda with Multiple Arguments
+add = lambda a, b: a + b
+print(add(3, 7))  # Output: 10
+
+# 7. Recursive Function
+A recursive function calls itself until a condition is met.
+
+Example: Factorial using Recursion
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+
+# Key Takeaways
+Functions make code reusable and organized.
+
+Use return to get output from a function.
+
+*args handles multiple positional arguments, while **kwargs handles multiple keyword arguments.
+
+Lambda functions are useful for short, one-line functions.
+
+Recursive functions call themselves for solving problems like factorial or Fibonacci series.

@@ -72,3 +72,6 @@ print(x)  # Output: {'name': 'Alice', 'age': 30}
 # Casting must be valid. For instance, int("3.14") will raise an error since "3.14" is not a valid integer.
 
 # When converting from float to int, Python truncates the decimal part (it does not round).
+nums = [x**2 for x in range(10)] # ✅ Faster 
+
+print(nums)
