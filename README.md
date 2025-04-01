@@ -387,3 +387,85 @@ Use return to get output from a function.
 Lambda functions are useful for short, one-line functions.
 
 Recursive functions call themselves for solving problems like factorial or Fibonacci series.
+
+# What is Scope in Python?
+Scope refers to the region where a variable can be accessed. Python has different scopes for variables to determine their visibility.
+
+Types of Variable Scope in Python
+Local Scope – Variables declared inside a function.
+
+Global Scope – Variables declared outside a function.
+
+Enclosing (Nonlocal) Scope – Variables in nested functions.
+
+Built-in Scope – Predefined Python functions and keywords.
+
+1. Local Scope
+A variable inside a function is local to that function and cannot be accessed outside.
+
+Example: Local Variable
+
+def my_function():
+    x = 10  # Local variable
+    print("Inside function:", x)
+
+my_function()
+# print(x)  # This will cause an error because x is not defined outside the function.
+2. Global Scope
+A variable declared outside any function is a global variable and can be accessed anywhere in the code.
+
+Example: Global Variable
+
+x = 20  # Global variable
+
+def my_function():
+    print("Inside function:", x)
+
+my_function()
+print("Outside function:", x)  # Global variable accessible outside
+3. Modifying Global Variables Inside a Function
+To modify a global variable inside a function, use the global keyword.
+
+Example: Using global Keyword
+
+x = 5  # Global variable
+
+def modify_global():
+    global x
+    x = 10  # Modifying global variable
+    print("Inside function:", x)
+
+modify_global()
+print("Outside function:", x)  # Output: 10
+4. Enclosing Scope (nonlocal Keyword)
+Enclosing (or nonlocal) scope applies to variables in a nested function (a function inside another function). Use nonlocal to modify them.
+
+Example: Using nonlocal Keyword
+
+def outer():
+    x = 5  # Enclosing variable
+
+    def inner():
+        nonlocal x
+        x = 10  # Modifying enclosing variable
+        print("Inside inner function:", x)
+
+    inner()
+    print("Inside outer function:", x)
+
+outer()
+5. Built-in Scope
+Python has built-in functions and keywords that are available everywhere.
+
+Example: Built-in Scope
+
+print(len("Python"))  # `len` is a built-in function
+Summary
+Local Scope: Variables inside a function, accessible only there.
+
+Global Scope: Variables outside functions, accessible anywhere.
+
+Enclosing Scope: Variables in outer functions, modified using nonlocal.
+
+Built-in Scope: Predefined Python functions and keywords.
+
